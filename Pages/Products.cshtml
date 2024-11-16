@@ -1,0 +1,30 @@
+﻿@page
+@model ProductsModel
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1>Products</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.Products)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+                <td>@product.Stock</td>
+            </tr>
+        }
+    </tbody>
+<button class="btn btn-primary mt-3" onclick="alert('Add more products functionality coming soon!')">Add Product</button>
+</table>

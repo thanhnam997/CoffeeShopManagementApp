@@ -1,0 +1,32 @@
+﻿@page
+@model CustomersModel
+@{
+    ViewData["Title"] = "Customers";
+}
+
+<div class="container mt-5">
+    <h1 class="mb-4 text-center">Our Customers</h1>
+    <table class="table table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model.Customers)
+            {
+                <tr>
+                    <td>@customer.Id</td>
+                    <td>@customer.Name</td>
+                    <td>@customer.Email</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<form method="get" class="d-flex mb-4">
+    <input class="form-control me-2" type="search" placeholder="Search Customers" name="searchQuery" />
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
