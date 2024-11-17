@@ -123,3 +123,4 @@ C:\Users\thanh\OneDrive - MNSCU\Desktop\coffeeshoppp\CoffeeShopManagementApp\obj
 C:\Users\thanh\OneDrive - MNSCU\Desktop\coffeeshoppp\CoffeeShopManagementApp\obj\Debug\net9.0\CoffeeShopManagementApp.genruntimeconfig.cache
 C:\Users\thanh\OneDrive - MNSCU\Desktop\coffeeshoppp\CoffeeShopManagementApp\obj\Debug\net9.0\ref\CoffeeShopManagementApp.dll
 C:\Users\thanh\OneDrive - MNSCU\Desktop\coffeeshoppp\CoffeeShopManagementApp\obj\Debug\net9.0\compressed\2a422ksmgl-zi1x19ydqe.gz
+C:\Users\thanh\OneDrive - MNSCU\Desktop\coffeeshoppp\CoffeeShopManagementApp\obj\Debug\net9.0\CoffeeShopManagementApp.sourcelink.json
