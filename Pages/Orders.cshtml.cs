@@ -41,6 +41,6 @@ public class Order
 {
     public int Id { get; set; }
     public int CustomerId { get; set; }
-    public string OrderDate { get; set; }
+    public required string OrderDate { get; set; }
     public decimal TotalAmount { get; set; }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class CustomersModel : PageModel
 {
-    public List<Customer> Customers { get; set; }
+    public required List<Customer> Customers { get; set; }
 
     public void OnGet()
     {

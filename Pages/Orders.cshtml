@@ -29,3 +29,7 @@
     </table>
 </div>
 <a asp-page="/AddOrder" class="btn btn-success mb-3">Add Order</a>
+@foreach (var order in Model.Orders)
+{
+    <a asp-page="/DeleteOrder" asp-route-orderId="@order.Id" class="btn btn-danger">Delete</a>
+}

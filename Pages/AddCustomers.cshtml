@@ -15,19 +15,47 @@
     <form method="post">
         <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
+        <h3>Customer Details</h3>
         <div class="mb-3">
-            <label for="Name" class="form-label">Customer Name</label>
-            <input type="text" asp-for="NewCustomer.Name" class="form-control" />
+            <label for="Name" class="form-label">Name</label>
+            <input asp-for="NewCustomer.Name" class="form-control" />
             <span asp-validation-for="NewCustomer.Name" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
             <label for="Email" class="form-label">Email</label>
-            <input type="email" asp-for="NewCustomer.Email" class="form-control" />
+            <input asp-for="NewCustomer.Email" class="form-control" />
             <span asp-validation-for="NewCustomer.Email" class="text-danger"></span>
         </div>
 
-        <button type="submit" class="btn btn-primary">Add Customer</button>
-        <a asp-page="/Customers" class="btn btn-secondary">Cancel</a>
+        <h3>Select Products</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.SelectedProducts.Count; i++)
+                {
+                    <tr>
+                        <td>
+                            <input type="checkbox" asp-for="SelectedProducts[@i].Selected" />
+                        </td>
+                        <td>@Model.SelectedProducts[i].ProductName</td>
+                        <td>@Model.SelectedProducts[i].Price.ToString("C")</td>
+                        <td>
+                            <input type="number" asp-for="SelectedProducts[@i].Quantity" class="form-control" />
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <button type="submit" class="btn btn-primary">Add Customer and Place Order</button>
+        <a asp-page="/" class="btn btn-secondary">Cancel</a>
     </form>
 </div>
